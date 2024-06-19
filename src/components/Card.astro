@@ -1,0 +1,23 @@
+---
+interface Props {
+	title: string;
+	body: string;
+	srcImg:string,
+}
+
+const {title, body,srcImg } = Astro.props;
+---
+
+<div class="flex justify-center items-center h-screen ">
+	<div class="rounded-lg border shadow-sm w-[300px] text-center">
+	<div class="p-3">
+			<img src={srcImg} alt="QR Code" class="rounded-lg" />
+		</div>
+		<h2 class="text-lg font-bold mb-2 px-8">
+			{title}
+		</h2>
+		<p class="text-sm text-gray-600 px-6 pb-2 ">
+			{body}
+		</p>
+</div>
+</div>
